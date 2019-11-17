@@ -8,8 +8,8 @@ import java.util.List;
         @NamedNativeQuery(name = "Company.retrieveCompaniesWithNamesStartingWith",
                 query = "SELECT * FROM COMPANIES WHERE SUBSTRING(COMPANY_NAME, 1, 3) = :LETTERS",
                 resultClass = Company.class),
-        @NamedNativeQuery(name = "Company.retrieveCompaniesWithNamesContainingRandomLetters",
-                query = "SELECT * FROM COMPANIES WHERE COMPANY_NAME LIKE CONCAT('%',:RANDOMLETTERS,'%')",
+        @NamedNativeQuery(name = "Company.retrieveCompaniesWithNamesContainingPhrase",
+                query = "SELECT * FROM COMPANIES WHERE COMPANY_NAME LIKE CONCAT('%',:PHRASE,'%')",
                 resultClass = Company.class)
 })
 

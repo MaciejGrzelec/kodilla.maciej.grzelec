@@ -9,8 +9,8 @@ import java.util.List;
 @NamedQueries({
         @NamedQuery(name = "Employee.retrieveEmployeesWithTheGivenLastName",
                 query = "FROM Employee WHERE lastname = :LASTNAME"),
-        @NamedQuery(name = "Employee.retrieveEmployeesWithNamesContainingRandomLetters",
-                query = "FROM Employee WHERE lastname LIKE CONCAT('%',:RANDOMLETTERS,'%')")
+        @NamedQuery(name = "Employee.retrieveEmployeesWithNamesContainingPhrase",
+                query = "FROM Employee WHERE lastname LIKE CONCAT('%',:PHRASE,'%')")
 })
 
 @Entity
